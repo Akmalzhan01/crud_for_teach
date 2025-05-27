@@ -59,3 +59,5 @@ app.delete('/delete/:id', (req, res) => {
 		.then(users => res.json(users))
 		.catch(err => res.json(err))
 })
+
+module.exports = app

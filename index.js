@@ -53,7 +53,7 @@ app.put('/edit/:id', (req, res) => {
 // delete
 app.delete('/delete/:id', (req, res) => {
 	const id = req.params.id
-	UserModel.findByIdAndDelete({ _id: id })
+	ToDoModel.findByIdAndDelete({ _id: id })
 		.then(users => res.json(users))
 		.catch(err => res.json(err))
 })

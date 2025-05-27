@@ -13,9 +13,7 @@ mongoose
 	.connect(
 		'mongodb+srv://akmalzhantokhtasinov:jkI5eiKPPlXVZn0i@cluster0.3b7pn4o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 	)
-	.then(success => {
-		app.listen(8080, console.log(`mgdb successfully on port 8080`))
-	})
+	.then(success => {})
 	.catch(error => console.log(error))
 
 /////////////////////////////////////////
@@ -60,4 +58,4 @@ app.delete('/delete/:id', (req, res) => {
 		.catch(err => res.json(err))
 })
 
-module.exports = app
+app.listen(8080, console.log(`mgdb successfully on port 8080`))

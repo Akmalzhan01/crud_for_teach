@@ -14,7 +14,7 @@ mongoose
 		'mongodb+srv://akmalzhantokhtasinov:jkI5eiKPPlXVZn0i@cluster0.3b7pn4o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 	)
 	.then(success => {
-		console.log(success)
+		console.log('success')
 	})
 	.catch(error => console.log(error))
 
@@ -25,7 +25,7 @@ app.get('/all', (req, res) => {
 		.catch(err => res.json(err))
 })
 // get by id
-app.get('/users/:id', (req, res) => {
+app.get('/:id', (req, res) => {
 	const id = req.params.id
 	ToDoModel.findById({ _id: id })
 		.then(users => res.json(users))

@@ -61,5 +61,3 @@ app.delete('/delete/:id', (req, res) => {
 })
 
 app.listen(8080, console.log(`mgdb successfully on port 8080`))
-
-module.exports = app

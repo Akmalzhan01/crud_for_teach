@@ -12,7 +12,10 @@ app.use(bodyParser.json())
 // MongoDB ulanish
 mongoose
 	.connect(
-		'mongodb+srv://akmalzhantokhtasinov:jkI5eiKPPlXVZn0i@cluster0.3b7pn4o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+		'mongodb+srv://akmalzhantokhtasinov:jkI5eiKPPlXVZn0i@cluster0.3b7pn4o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+		{
+			serverSelectionTimeoutMS: 10000, // 10s timeout
+		}
 	)
 	.then(() => console.log('MongoDB ga ulandi'))
 	.catch(err => console.error('MongoDB ulanish xatosi:', err))

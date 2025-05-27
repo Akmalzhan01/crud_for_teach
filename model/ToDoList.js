@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const ToDoListSchema = mongoose.Schema(
+const ToDoListSchema = new mongoose.Schema(
 	{
 		title: {
 			type: String,
